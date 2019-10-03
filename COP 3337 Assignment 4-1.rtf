@@ -1,0 +1,161 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fmodern\fcharset0 CourierNewPSMT;\f1\fmodern\fcharset0 CourierNewPS-BoldMT;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww13740\viewh16480\viewkind1
+\deftab720
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\f0\fs20 \cf0 Assignment 4 Specifications\
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\fs18 \cf0 \
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\f1\b\fs20 \cf0 Due
+\f0\b0 : 7 March 2019 - class time.\
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\fs18 \cf0 \
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\f1\b\fs20 \cf0 Assignment
+\f0\b0 : Write algorithms and programs to create a BetterRectangle sub-class - refer to E9.10 on page 459 in the text as a start. Provide a BetterRectangle sub-class that extends the Rectangle class of the standard Java library by adding methods to compute the area, perimeter, slope and mid-point of the rectangle, as well as valid constructors for the new sub-class. Provide a BRectTester program that will execute and validate the BetterRectangle sub-class. \
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\fs18 \cf0 \
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\f1\b\fs20 \cf0 Output
+\f0\b0 : Output will provide validation that all new features in the sub-class are functioning properly - presented in a clearly labeled, readable and attractive manner. See sample output below. Display \'93before\'94 and \'93after\'94 to feature the mutator method, expected values for the utility methods. All output should be handled by the tester class, not the super or sub-class. Use the toString() method to display the characteristics of each rectangle - required. 2 decimal place accuracy for slope.\
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\fs18 \cf0 \
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\f1\b\fs20 \cf0 Input
+\f0\b0 : No user input required. No graphical interface permitted. Rectangles will be \'93hard-coded\'94 into your tester class. Specifics for the required rectangles will be provided later. Develop your own test cases until then\'85\
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\fs18 \cf0 \
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\f1\b\fs20 \cf0 Requirements
+\f0\b0 : Use only material covered in the first nine chapters. Style requirements as discussed in class expected. Efficiency should always be considered. Choose the most appropriate loop/decision structures and variable types. No switch or breaks statements allowed. No magic numbers! Class design guidelines as discussed in class and described in chapters three & eight expected. Import libraries as required. No graphics.\
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\fs18 \cf0 \
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\fs20 \cf0 You must write at least two programs: one will be the BetterRectangle sub-class extension of the java.awt.Rectangle class; and one BRectTester class that will perform the actions required to execute and validate all the added or overridden methods of the extended sub-class - to \'93test\'94 your new class.\
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\fs18 \cf0 \
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\fs20 \cf0 The tester class will create four (4) \'93better\'94 rectangles, using each of the required constructors. Next, utilizing one of the rectangles, the tester will execute all of the added accessor methods. Then, using two of the remaining rectangles, the tester will execute the \'93utility\'94 methods (and the equals() method) listed below, comparing the two rectangles. Finally, using the remaining rectangle, the tester will execute the mutator method. Expected values should be displayed for each result to confirm correct results.\
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\fs18 \cf0 \
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\fs20 \cf0 The BetterRectangle sub-class may 
+\f1\b NOT
+\f0\b0  add any new instance variables; however, it can provide new constants. Furthermore, the sub-class may 
+\f1\b NOT
+\f0\b0  directly use the super-class instance variables \'96 only access them via provided methods. In the sub-class constructors, use the setLocation() and setSize() methods of the Rectangle class. Include an override for the toString() and equals() methods. The sub-class must implement all of the methods/constructors listed below.\
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\fs18 \cf0 \
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\fs20 \cf0 Constructors - \ul must\ulnone  use setLocation() and setSize() methods\
+	BetterRectangle(): creates a unit rectangle, anchored at Origin\
+		[unit rectangle means height = width = 1]\
+	BetterRectangle(int width, int height): creates rectangle, anchored at \
+		Origin\
+	BetterRectangle(int x, int y, int width, int height): create rectangle\
+	BetterRectangle(BetterRectangle rectangle): creates a copy of rectangle\
+Override - use of 
+\f1\b @Override
+\f0\b0  is required\
+ 	equals(rectangle): to ensure object characteristics are identical\
+\pard\pardeftab720\fi720\ri0\partightenfactor0
+\cf0 toString(): to also include area, perimeter, slope and mid-point; in \
+	addition to the \'93anchor\'94 coordinates, width and height.\
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+\cf0 \
+Added Accessor - no new instance variables, note types, & be careful rounding\
+	getArea() return (int): width * height        \
+	getPerimeter() return (int): (width + height) * 2\
+	getSlope() return (float): height / width\
+	getMidPoint() return (Point): center of rectangle + \'93anchor\'94 corner \
+		(rounded \ul UP\ulnone  to nearest integer)\
+\
+Added Utilities - (rectangle) is another BetterRectangle\
+	proportional(rectangle) return true: if slope is same for both \
+	equivalent(rectangle) return true: if perimeter is same for both\
+	similar(rectangle) return true: if area is same for both\
+\pard\pardeftab720\fi720\ri0\partightenfactor0
+\cf0 concentric(rectangle) return true: if midpoint is same for both\
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\f2\fs18 \cf0 Note that some utility methods may be testing for equality of floating point values - refer to page 188, 5.2.2 for possible issues.\
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\f0\fs20 \cf0 \
+Added Mutator\
+	boolean scaleBy(scale) multiply height & width by a fixed positive \
+	(> zero) integer \'93scale\'94: returns true upon success, returns false upon 	failure.\
+\
+Use of the \'93Point\'94 class is required - Appendix D (A17-18) in the text \'97 java.awt.geom \'97 along with page 67, may prove useful for Points. \
+\pard\pardeftab720\ri0\partightenfactor0
+\cf0 \
+\pard\pardeftab720\fi14\ri0\partightenfactor0
+
+\f1\b \cf0 Submission
+\f0\b0 : Your program must be able to compile and execute on FIU SCIS, using the \'93java\'94 compiler. Test it there before you submit.\
+\
+Name your primary source code file: BRectTester.java and your extended class source code file: BetterRectangle.java.\
+\
+Refer to the Canvas documents: \'93How to Develop a Simple Java Program\'94 and \'93Style Guide\'94 documents for details on required program and class format and documentation. Review all documents carefully! Note: the class source code file will use the class heading documentation, the tester (main) source code will use the program heading documentation.\
+\
+Algorithm (pseudocode) should be submitted for each program and in a separate text file and included with the Canvas posting and class submission. \
+\
+Print out a copy of your primary source code, class source code and pseudocode and submit in class \'97 signed, stapled and collated in the specified sequence: primary source code (w/main) file, class source code files and then the pseudocode text file(s). \
+\
+Post a .zip file \'97 with all source code (.java) and text files \'97 on the Canvas web site. Do not include any extraneous (e.g. IDE, output) files in the Canvas submission.\
+\
+Program documentation must include the required signed disclaimer (comment) in the heading \'97 no grade will be assigned to programs that omit the disclaimer or signature.\page Sample Output:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri-3600\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri-3600\partightenfactor0
+
+\fs12 \cf0 A: BetterRectangle[x=0,y=0, width=4, height=3, area=12, perimeter=14, slope=0.75, mid-point=java.awt.Point[x=2,y=2]]\
+B: BetterRectangle[x=0,y=0, width=4, height=3, area=12, perimeter=14, slope=0.75, mid-point=java.awt.Point[x=2,y=2]]\
+C: BetterRectangle[x=1,y=1, width=3, height=4, area=12, perimeter=14, slope=1.33, mid-point=java.awt.Point[x=3,y=3]]\
+D: BetterRectangle[x=0,y=0, width=1, height=1, area=1, perimeter=4, slope=1.00, mid-point=java.awt.Point[x=1,y=1]]\
+\
+Accessor methods being executed for Rectangle A...\
+A: BetterRectangle[x=0,y=0, width=4, height=3, area=12, perimeter=14, slope=0.75, mid-point=java.awt.Point[x=2,y=2]]\
+   Area:	12\
+   Perimeter:	14\
+   Slope:	0.75\
+   MidPoint:	(2,2)\
+\
+Utility methods being executed for Rectangle B and C...\
+B: BetterRectangle[x=0,y=0, width=4, height=3, area=12, perimeter=14, slope=0.75, mid-point=java.awt.Point[x=2,y=2]]\
+C: BetterRectangle[x=1,y=1, width=3, height=4, area=12, perimeter=14, slope=1.33, mid-point=java.awt.Point[x=3,y=3]]\
+   Equals? 	 false		Expected: false\
+   Proportional? false		Expected: false\
+   Equivalent? 	 true		Expected: true\
+   Similar? 	 true		Expected: true\
+   Concentric? 	 false		Expected: false\
+\
+Mutuator methods being executed for Rectangle D...\
+D: BetterRectangle[x=0,y=0, width=1, height=1, area=1, perimeter=4, slope=1.00, mid-point=java.awt.Point[x=1,y=1]]\
+   Scale by  3? true\
+   Scale by -3? false\
+D: BetterRectangle[x=0,y=0, width=3, height=3, area=9, perimeter=12, slope=1.00, mid-point=java.awt.Point[x=2,y=2]]\
+}
